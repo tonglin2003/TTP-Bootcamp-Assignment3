@@ -1,0 +1,15 @@
+{
+  "name": "ttp-bootcamp-assignment3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "mathFunction.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.5.0"
+  }
+}
