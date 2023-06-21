@@ -1,27 +1,20 @@
-function containsMostWater(height)
-{
-    var maxArea = 0;
-    var left = 0; 
-    var right = height.length - 1;
+const containsMostWater = require("./containsMostWater");
 
-    while (left < right)
-    {
-        // calculate the current area, meanwhile move the pointer with lower value to find other areas
-        if (height[left] < height[right])
-        {
-            var currArea = height[left] * (right - left);
-            left++;
-        }
-        else
-        {
-            var currArea = height[right] * (right-left);
-            right--;
-        }
-        // compare the area, and find the higher one
-        maxArea = Math.max(maxArea, currArea);
-        
-    }
-    return maxArea;
-}
+describe("containsMostWater(height) will return the maximum area", ()=>{
+    test("should return the length of longest substring", () =>{
+        expect(containsMostWater([1, 8, 6, 2, 5, 4, 8, 3, 7])).toEqual(49);
+    });
+    test("given an array with 1 element, and return 0", () =>{
+        expect(containsMostWater([1])).toEqual(0);
+    });
+    test("given an array, and return the max area", () =>{
+        expect(containsMostWater([1, 2, 1])).toEqual(2);
+    });
+    test("given an array, and return the max area", () =>{
+        expect(containsMostWater([4, 3, 2, 1, 4])).toEqual(16);
+    });
+    test("given an array, and return the max area", () =>{
+        expect(containsMostWater([2,4,6,7,5,1])).toEqual(12);
+    });
 
-module.export = containsMostWater;
+});

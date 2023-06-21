@@ -45,14 +45,5 @@ class ShoppingCart
     }
 }
 
-let cart = new ShoppingCart();
-cart.addToCart("notebook", 19.99, 10);
-cart.addToCart("pencil", 1.99, 14);
-console.log(cart);
-
-cart.removeFromCart("notebook", 5);
-cart.removeFromCart("pencil", 14);
-console.log(cart);
-
-console.log(cart.calculateTotal())
+module.exports = ShoppingCart;
 

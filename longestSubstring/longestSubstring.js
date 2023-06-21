@@ -35,11 +35,6 @@ function longestSubstring(str)
     
 }
 
-console.log(longestSubstringWithoutRepeatingCharacters("pwwkew"));
-console.log(longestSubstringWithoutRepeatingCharacters("bbbbb"));
-console.log(longestSubstringWithoutRepeatingCharacters("dvdf"));
-console.log(longestSubstringWithoutRepeatingCharacters("abcabcbb"));
-
-module.export = longestSubstring;
+module.exports = longestSubstring;
 
 
